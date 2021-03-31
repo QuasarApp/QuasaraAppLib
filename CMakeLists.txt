@@ -23,7 +23,7 @@ cmake_minimum_required(VERSION 3.1)
 #include(CMake/crossplatform/crossplatform.cmake)
 
 
-#include(CMake/ProjectOut.cmake)
+include(CMake/ProjectOut.cmake)
 include(CMake/ccache.cmake)
 include(CMake/Version.cmake)
 include(CMake/QuasarAppCITargets.cmake)
@@ -43,11 +43,11 @@ file(GLOB SOURCE_CPP
     "*.cpp"
 )
 
-add_library(${PROJECT_NAME} SHARED ${SOURCE_CPP})
+add_library(${PROJECT_NAME} ${SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt::Core)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-#setVersion(1 4 5)
+setVersion(1 4 5)
 
-#initAll()
-#addDoc(${PROJECT_NAME}Docs ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf)
+initAll()
+addDoc(${PROJECT_NAME}Docs ${CMAKE_CURRENT_SOURCE_DIR}/doxygen.conf)
