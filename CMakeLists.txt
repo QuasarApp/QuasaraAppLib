@@ -43,7 +43,7 @@ file(GLOB SOURCE_CPP
     "*.cpp"
 )
 
-add_library(${PROJECT_NAME} ${SOURCE_CPP})
+add_library(${PROJECT_NAME} shared ${SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt::Core)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
