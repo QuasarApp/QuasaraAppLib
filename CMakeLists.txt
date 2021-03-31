@@ -23,7 +23,7 @@ cmake_minimum_required(VERSION 3.1)
 #include(CMake/crossplatform/crossplatform.cmake)
 
 
-include(CMake/ProjectOut.cmake)
+#include(CMake/ProjectOut.cmake)
 include(CMake/ccache.cmake)
 include(CMake/Version.cmake)
 include(CMake/QuasarAppCITargets.cmake)
