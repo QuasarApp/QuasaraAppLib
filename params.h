@@ -172,17 +172,19 @@ public:
      */
     static QString getCurrentExecutableDir();
 
-private:
-    static QString timeString();
-    static std::string lvlToString(VerboseLvl vLvl);
-    static bool writeLoginFile(const QString& log, VerboseLvl vLvl = VerboseLvl::Debug);
-
     /**
      * @brief Traverse @a params and output its content (all the working
      *    options) to stdout in the form of option-value groups at the
      *    debug verbose level (-verbose 3).
      */
     static void printWorkingOptions();
+
+private:
+    static QString timeString();
+    static std::string lvlToString(VerboseLvl vLvl);
+    static bool writeLoginFile(const QString& log, VerboseLvl vLvl = VerboseLvl::Debug);
+
+
 
 
     static QMap<QString, QString> params;
